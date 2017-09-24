@@ -1,0 +1,20 @@
+<div class="card post">
+  <div class="card-header">
+    <h4>Ismail</h4>
+  </div>
+  <div class="card-img">
+    <img (click)="onClick()" src="../assets/{{image}}.jpg" alt="">
+  </div>
+  <div class="card-footer center-text">
+    <div class="row">
+      <div class="column large-6 small-6">
+        <p>{{voteA}}</p>
+        <button (click)="voteAfter()" class="vote">A</button>
+      </div>
+      <div class="column large-6 small-6">
+        <button (click)="voteBefore()" class="vote">B</button>
+        <p>{{voteB}}</p>
+      </div>
+    </div>
+  </div>
+</div>
