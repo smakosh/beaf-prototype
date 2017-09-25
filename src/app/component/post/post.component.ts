@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./post.component.css']
 })
 export class PostComponent implements OnInit {
-  image = 'meh';
   voteA = 0;
   voteB = 0;
   focusA: string;
@@ -14,16 +13,6 @@ export class PostComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-  }
-
-  onClick()  {
-
-    this.image = 'meh2';
-  }
-
-  onClick_1()  {
-
-    this.image = 'meh';
   }
 
   voteAfter()  {

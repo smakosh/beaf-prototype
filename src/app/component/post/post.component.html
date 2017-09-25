@@ -3,22 +3,35 @@
     <span class="avatar"></span>
     <h4>Ismail</h4>
   </div>
-  <div class="card-img">
-    <span class="prev" (click)="onClick_1()"></span>
-    <img src="../assets/{{image}}.jpg" alt="">
-    <span class="next" (click)="onClick()"></span>
+  <div class="both">
+
+    <div class="card-img">
+      <img src="../assets/meh.jpg" alt="">
+    </div>
+
+    <div class="card-img">
+      <img src="../assets/meh2.jpg" alt="">
+    </div>
+
   </div>
   <div class="card-footer description">
     <h4>Description</h4>
     <p>4 min ago</p>
   </div>
   <div class="card-footer votes">
+    <div class="row">
 
-    <button (click)="voteAfter()" class="voteA {{focusA}}">A</button>
-    <p>{{voteA}}</p>
+      <div class="column small-6">
+        <button (click)="voteAfter()" class="voteA {{focusA}}">A</button>
+        <p>{{voteA}}</p>
+      </div>
 
-    <button (click)="voteBefore()" class="voteB {{focusB}}">B</button>
-    <p>{{voteB}}</p>
+      <div class="column small-6">
+        <button (click)="voteBefore()" class="voteB {{focusB}}">B</button>
+        <p>{{voteB}}</p>
+      </div>
+
+    </div>
 
   </div>
 </div>
