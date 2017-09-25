@@ -54,16 +54,15 @@
 .votes .voteA:hover  {
 
   border-color: #03A9F4;
-  border-width: 2px;
   color: #03A9F4;
   transition: .5s;
 }
 
-.focused_vote_A  {
+.votes .focused_vote_A  {
 
   border-color: #03A9F4;
   background-color: #03A9F4;
-  color: #fff !important;
+  color: #fff;
   transition: .5s;
 }
 
@@ -77,16 +76,15 @@
 .votes .voteB:hover  {
 
   border-color: #f44336;
-  border-width: 2px;
   color: #f44336;
   transition: .5s;
 }
 
-.focused_vote_B  {
+.votes .focused_vote_B  {
 
   border-color: #f44336;
   background-color: #f44336;
-  color: #fff !important;
+  color: #fff;
   transition: .5s;
 }
 
