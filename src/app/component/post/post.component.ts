@@ -9,6 +9,8 @@ export class PostComponent implements OnInit {
   image = 'meh';
   voteA = 0;
   voteB = 0;
+  focusA: string;
+  focusB: string;
   constructor() { }
 
   ngOnInit() {
@@ -17,6 +19,11 @@ export class PostComponent implements OnInit {
   onClick()  {
 
     this.image = 'meh2';
+  }
+
+  onClick_1()  {
+
+    this.image = 'meh';
   }
 
   voteAfter()  {
@@ -29,6 +36,7 @@ export class PostComponent implements OnInit {
     else  {
 
       this.voteA = 1;
+      this.focusA = 'focused_vote_A';
     }
   }
 
@@ -42,6 +50,7 @@ export class PostComponent implements OnInit {
     else  {
 
       this.voteB = 1;
+      this.focusB = 'focused_vote_B';
     }
   }
 
