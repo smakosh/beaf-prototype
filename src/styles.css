@@ -22,7 +22,7 @@
     align-items: center;
   }
 
-  .description  {
+  .card .description  {
 
     display: flex;
     justify-content: space-between;
@@ -30,22 +30,22 @@
     border-bottom: 1px solid #dad7d7;
   }
 
-  .description h4, p  {
+  .card .description h4, p  {
 
     margin: 0;
   }
 
-  .description p  {
+  .card .description p  {
 
     color: #8c8b8b;
   }
 
-  .votes p {
+  .card .votes p {
 
     margin: 0 1rem 0 0;
   }
 
-  .votes button  {
+  .card .votes button  {
 
     padding: 12px 14px;
     cursor: pointer;
@@ -53,14 +53,14 @@
     border-radius: 100%;
   }
 
-  .votes .voteA  {
+  .card .votes .voteA  {
 
     border: 1px solid #03A9F4;
     transition: .5s;
     color: #03A9F4;
   }
 
-  .votes .focused_vote_A  {
+  .card .votes .focused_vote_A  {
 
     border-color: #03A9F4;
     background-color: #03A9F4;
@@ -68,14 +68,14 @@
     transition: .5s;
   }
 
-  .votes .voteB  {
+  .card .votes .voteB  {
 
     border: 1px solid #f44336;
     transition: .5s;
     color: #f44336;
   }
 
-  .votes .focused_vote_B  {
+  .card .votes .focused_vote_B  {
 
     border-color: #f44336;
     background-color: #f44336;
@@ -83,12 +83,12 @@
     transition: .5s;
   }
 
-  .votes  {
+  .card .votes  {
 
     padding: 1rem;
   }
 
-  .votes .column  {
+  .card .votes .column  {
 
     display: flex;
     align-items: center;
