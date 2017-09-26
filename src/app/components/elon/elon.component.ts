@@ -1,15 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-post',
-  templateUrl: './post.component.html',
-  styleUrls: ['./post.component.css']
+  selector: 'app-elon',
+  templateUrl: './elon.component.html',
+  styleUrls: ['./elon.component.css']
 })
-export class PostComponent implements OnInit {
+export class ElonComponent implements OnInit {
+
   voteA = 0;
   voteB = 0;
   focusA: string;
   focusB: string;
+  hide = 'hide';
   constructor() { }
 
   ngOnInit() {
@@ -26,6 +28,7 @@ export class PostComponent implements OnInit {
 
       this.voteA = 1;
       this.focusA = 'focused_vote_A';
+      this.hide = 'hidden';
     }
   }
 
@@ -40,6 +43,7 @@ export class PostComponent implements OnInit {
 
       this.voteB = 1;
       this.focusB = 'focused_vote_B';
+      this.hide = 'hidden';
     }
   }
 

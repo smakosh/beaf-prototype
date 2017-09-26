@@ -1,0 +1,36 @@
+<div class="card post">
+  <div class="card-header">
+    <span class="avatar"></span>
+    <h4>Elon Musk</h4>
+  </div>
+  <div class="both">
+
+    <div class="card-img">
+      <img src="../assets/elonbefore.jpg" alt="">
+    </div>
+
+    <div class="card-img">
+      <img src="../assets/elonafter.jpg" alt="">
+    </div>
+
+  </div>
+  <div class="card-footer description">
+    <h4>Description</h4>
+    <p>4 min ago</p>
+  </div>
+  <div class="card-footer votes">
+    <div class="row">
+
+      <div class="column small-6">
+        <button data-tooltip="Before" (click)="voteBefore()" class="voteB {{focusB}}">B</button>
+        <p class="{{hide}}">{{voteB}}</p>
+      </div>
+
+      <div class="column small-6">
+        <button data-tooltip="After" (click)="voteAfter()" class="voteA {{focusA}}">A</button>
+        <p class="{{hide}}">{{voteA}}</p>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,16 +1,16 @@
 <div class="card post">
   <div class="card-header">
     <span class="avatar"></span>
-    <h4>Ismail</h4>
+    <h4>Lucy</h4>
   </div>
   <div class="both">
 
     <div class="card-img">
-      <img src="../assets/meh.jpg" alt="">
+      <img src="../assets/meh3.jpg" alt="">
     </div>
 
     <div class="card-img">
-      <img src="../assets/meh2.jpg" alt="">
+      <img src="../assets/meh4.jpg" alt="">
     </div>
 
   </div>
@@ -22,16 +22,15 @@
     <div class="row">
 
       <div class="column small-6">
-        <button (click)="voteAfter()" class="voteA {{focusA}}">A</button>
-        <p>{{voteA}}</p>
+        <button data-tooltip="Before" (click)="voteBefore()" class="voteB {{focusB}}">B</button>
+        <p class="{{hide}}">{{voteB}}</p>
       </div>
 
       <div class="column small-6">
-        <button (click)="voteBefore()" class="voteB {{focusB}}">B</button>
-        <p>{{voteB}}</p>
+        <button data-tooltip="After" (click)="voteAfter()" class="voteA {{focusA}}">A</button>
+        <p class="{{hide}}">{{voteA}}</p>
       </div>
 
     </div>
-
   </div>
 </div>
