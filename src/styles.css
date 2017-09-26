@@ -1,6 +1,10 @@
 @import "unnamed.min.css";
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 
+body {
+  background: #eee;
+}
+
 .card-header  {
   display: flex;
   align-items: center;
@@ -91,6 +95,7 @@
 
 .post  {
   margin-bottom: 4rem;
+  background: white;
 }
 
 /**
