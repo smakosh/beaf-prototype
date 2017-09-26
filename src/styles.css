@@ -1,170 +1,164 @@
-/* You can add global styles to this file, and also import other style files */
-@import"unnamed.min.css";
+@import "unnamed.min.css";
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 
 .card-header  {
+  display: flex;
+  align-items: center;
+}
 
-    display: flex;
-    align-items: center;
-  }
+.card-header .avatar  {
+  border-radius: 100%;
+  border: 1px solid #212121;
+  padding: 15px;
+  margin-right: 1rem;
+}
 
-  .card-header .avatar  {
+.both  {
+  display: flex;
+  align-items: center;
+}
 
-    border-radius: 100%;
-    border: 1px solid #212121;
-    padding: 25px 25px;
-    margin-right: 1rem;
-  }
+.card .description  {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.4rem 1rem;
+  border-bottom: 1px solid #dad7d7;
+}
 
-  .both  {
+.card .description h4, p  {
+  margin: 0;
+}
 
-    display: flex;
-    align-items: center;
-  }
+.card .description p  {
+  margin-left: .5em;
+  white-space: nowrap;
+  color: #CECECE;
+}
 
-  .card .description  {
+.card .votes p {
+  margin: 0 1rem;
+  line-height: 40px;
+}
 
-    display: flex;
-    justify-content: space-between;
-    padding: 1.4rem 1rem;
-    border-bottom: 1px solid #dad7d7;
-  }
+.card .votes button  {
+  width: 40px;
+  padding: 0;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 100%;
+  transition: background .3s;
+}
 
-  .card .description h4, p  {
+.card .votes .right  {
+  display: flex;
+  margin-left: auto;
+}
 
-    margin: 0;
-  }
+.card .votes .voteA  {
+  border: 1px solid #03A9F4;
+  transition: .5s;
+  color: #03A9F4;
+}
 
-  .card .description p  {
+.card .votes .focused_vote_A  {
+  border-color: #03A9F4;
+  background-color: #03A9F4;
+  color: #fff;
+  transition: .5s;
+}
 
-    color: #8c8b8b;
-  }
+.card .votes .voteB  {
+  border: 1px solid #f44336;
+  transition: .5s;
+  color: #f44336;
+}
 
-  .card .votes p {
+.card .votes .focused_vote_B  {
+  border-color: #f44336;
+  background-color: #f44336;
+  color: #fff;
+  transition: .5s;
+}
 
-    margin: 0 1rem 0 0;
-  }
+.card .votes  {
+  padding: 1rem;
+}
 
-  .card .votes button  {
+.card .votes .column  {
+  display: flex;
+  align-items: center;
+}
 
-    padding: 12px 14px;
-    cursor: pointer;
-    margin-right: 1rem;
-    border-radius: 100%;
-  }
+.post  {
+  margin-bottom: 4rem;
+}
 
-  .card .votes .voteA  {
+/**
+  * Tooltip Styles
+  */
 
-    border: 1px solid #03A9F4;
-    transition: .5s;
-    color: #03A9F4;
-  }
+/* Add this attribute to the element that needs a tooltip */
+[data-tooltip] {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
 
-  .card .votes .focused_vote_A  {
+/* Hide the tooltip content by default */
+[data-tooltip]:before,
+[data-tooltip]:after {
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  pointer-events: none;
 
-    border-color: #03A9F4;
-    background-color: #03A9F4;
-    color: #fff;
-    transition: .5s;
-  }
+}
 
-  .card .votes .voteB  {
+/* Position tooltip above the element */
+[data-tooltip]:before {
+  position: absolute;
+  bottom: -128%;
+  left: -70%;
+  margin-bottom: 5px;
+  margin-left: 0px;
+  padding: 7px;
+  width: 73px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #000;
+  background-color: hsla(0, 0%, 20%, 0.9);
+  color: #fff;
+  content: attr(data-tooltip);
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.2;
+  transition: .5s;
+}
 
-    border: 1px solid #f44336;
-    transition: .5s;
-    color: #f44336;
-  }
+/* Triangle hack to make tooltip look like a speech bubble */
+[data-tooltip]:after {
+  position: absolute;
+  top: 126%;
+  left: 50%;
+  margin-left: -5px;
+  width: 0;
+  border-bottom: 5px solid hsla(0, 0%, 20%, 0.9);
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  content: " ";
+  font-size: 0;
+  line-height: 0;
+  transition: .5s;
+}
 
-  .card .votes .focused_vote_B  {
-
-    border-color: #f44336;
-    background-color: #f44336;
-    color: #fff;
-    transition: .5s;
-  }
-
-  .card .votes  {
-
-    padding: 1rem;
-  }
-
-  .card .votes .column  {
-
-    display: flex;
-    align-items: center;
-  }
-
-  .post  {
-
-    margin-bottom: 4rem;
-  }
-
-  /**
-   * Tooltip Styles
-   */
-
-  /* Add this attribute to the element that needs a tooltip */
-  [data-tooltip] {
-    position: relative;
-    z-index: 2;
-    cursor: pointer;
-  }
-
-  /* Hide the tooltip content by default */
-  [data-tooltip]:before,
-  [data-tooltip]:after {
-    visibility: hidden;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
-    opacity: 0;
-    pointer-events: none;
-
-  }
-
-  /* Position tooltip above the element */
-  [data-tooltip]:before {
-    position: absolute;
-    bottom: -128%;
-    left: -70%;
-    margin-bottom: 5px;
-    margin-left: 0px;
-    padding: 7px;
-    width: 73px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    background-color: #000;
-    background-color: hsla(0, 0%, 20%, 0.9);
-    color: #fff;
-    content: attr(data-tooltip);
-    text-align: center;
-    font-size: 14px;
-    line-height: 1.2;
-    transition: .5s;
-  }
-
-  /* Triangle hack to make tooltip look like a speech bubble */
-  [data-tooltip]:after {
-    position: absolute;
-    top: 126%;
-    left: 50%;
-    margin-left: -5px;
-    width: 0;
-    border-bottom: 5px solid hsla(0, 0%, 20%, 0.9);
-    border-right: 5px solid transparent;
-    border-left: 5px solid transparent;
-    content: " ";
-    font-size: 0;
-    line-height: 0;
-    transition: .5s;
-  }
-
-  /* Show tooltip content on hover */
-  [data-tooltip]:hover:before,
-  [data-tooltip]:hover:after {
-    visibility: visible;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
-    opacity: 1;
-    transition: .5s;
-  }
+/* Show tooltip content on hover */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  visibility: visible;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  transition: .5s;
+}

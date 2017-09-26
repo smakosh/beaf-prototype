@@ -15,15 +15,17 @@
 
   </div>
   <div class="card-footer description">
-    <h4>Description</h4>
+    <h4>Hey, I got a new haircut! :)</h4>
     <p>4 min ago</p>
   </div>
   <div class="card-footer votes">
     <div class="row">
 
       <div class="column small-6">
-        <button data-tooltip="Before" (click)="voteBefore()" class="voteB {{focusB}}">B</button>
-        <p class="{{hide}}">{{voteB}}</p>
+        <div class="right">
+          <p class="{{hide}}">{{voteB}}</p>
+          <button data-tooltip="Before" (click)="voteBefore()" class="voteB {{focusB}}">B</button>
+        </div>
       </div>
 
       <div class="column small-6">
