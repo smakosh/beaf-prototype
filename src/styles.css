@@ -29,6 +29,10 @@ body {
   border-bottom: 1px solid #dad7d7;
 }
 
+.card .description h4  {
+  font-weight: normal;
+}
+
 .card .description h4, p  {
   margin: 0;
 }
