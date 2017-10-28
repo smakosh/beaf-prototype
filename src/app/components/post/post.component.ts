@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
+import { PostService } from '../../services/post.service';
 
 @Component({
   selector: 'app-post',
@@ -6,44 +8,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./post.component.css']
 })
 export class PostComponent implements OnInit {
-  voteA = 0;
-  voteB = 0;
-  focusA: string;
-  focusB: string;
-  hide = 'hide';
-  constructor() { }
+  @Input() post;
+  postservice: PostService;
+
+  constructor(postservice: PostService) {
+    this.postservice = postservice;
+  }
 
   ngOnInit() {
   }
 
-  voteAfter()  {
-
-    if (this.voteB === 1) {
-
-      this.voteA = 0;
-    }
-    // tslint:disable-next-line:one-line
-    else  {
-
-      this.voteA = 1;
-      this.focusA = 'focused_vote_A';
-      this.hide = 'hidden';
-    }
+  voteA(After) {
+    this.postservice.voteAfter({ name: this.post.name, voteA: After});
   }
 
-  voteBefore() {
-
-    if (this.voteA === 1) {
-
-      this.voteB = 0;
-    }
-    // tslint:disable-next-line:one-line
-    else  {
-
-      this.voteB = 1;
-      this.focusB = 'focused_vote_B';
-      this.hide = 'hidden';
-    }
+  voteB(Before) {
+    this.postservice.voteBefore({ name: this.post.name, voteB: Before});
   }
 
 }
